@@ -101,7 +101,6 @@ public class DependencyScannerBuilder extends Builder implements SimpleBuildStep
 
         public ListBoxModel doFillCredentialsIdItems(
                 @AncestorInPath Item item,
-                @QueryParameter String slackChannel,
                 @QueryParameter String credentialsId,
                 @QueryParameter String slackWorkspace
         ) {
