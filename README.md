@@ -1,4 +1,4 @@
-## Jenkins Dependency Update Scanner (maven)
+## Jenkins Dependency Update Scanner Plugin (maven)
 My first Jenkins plugin, which invokes a maven command to scan project dependencies for updates, collects scan info 
 and sends it to your Slack workspace and channel which you specify. Current implementation fires a POST request
 to `{<yourWorkspace>.slack.com}/api/chat.postMessage` with a payload containing the scan info. Next update will have 
