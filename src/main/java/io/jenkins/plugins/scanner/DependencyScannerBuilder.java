@@ -222,6 +222,7 @@ public class DependencyScannerBuilder extends Builder implements SimpleBuildStep
             return dependencyMap;
         } catch (Exception e) {
             e.printStackTrace();
+            printStream.println(e.getMessage());
             throw e;
         }
     }
@@ -235,7 +236,11 @@ public class DependencyScannerBuilder extends Builder implements SimpleBuildStep
             HttpClient httpClient = HttpClient.newHttpClient();
             Map<String, Object> payload = new HashMap<String, Object>() {{
                 put("channel", slackChannel);
-                put("text", strippedText);
+                if (text == null) {
+                    put("text", "All packages are up to date!");
+                } else {
+                    put("text", strippedText);
+                }
             }};
             String jsonPayload = objectMapper.writeValueAsString(payload);
             HttpRequest.BodyPublisher bodyPublisher = HttpRequest.BodyPublishers.ofString(jsonPayload);
