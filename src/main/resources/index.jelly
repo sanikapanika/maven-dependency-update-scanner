@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+  This plugin scans for maven dependency updates and sends slack notifications if any are present.
+</div>
