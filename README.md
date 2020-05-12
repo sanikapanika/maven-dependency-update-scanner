@@ -6,7 +6,7 @@ the `webhook` template embedded.
 
 ### Prerequisites
 1. Maven (3.6.2)
-2. Jenkins (ADMINISTRATION role)
+2. Jenkins (ADMINISTRATION role - only for installation)
 
 ### Installation
 1. Clone the repo
